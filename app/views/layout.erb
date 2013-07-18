@@ -24,20 +24,20 @@
   <title>SHORTY IS THE SHIT</title>
 </head>
 <body>
- <div id="wrapper"> 
-    <div id="header">
+ <div class="container_12"> 
+    <div id="header" class="center">
       <a href="/" alt="Shorty Is A Ten"><h1>Shorty Is A Ten!</h1></a>
       <span>Make your links perfect tens. Short, readable URLs every time.</span>
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% end %>
-    </div>
+    </div> <!-- Closes header DIV -->
     <div id="content">
       <%= yield %>
-    </div>
+    </div> <!-- Closes content DIV -->
     <div id="footer">
-      <span>A Karst & KCHAMP Production. Made possible by <a href="http://devbootcamp.com" alt="Dev Bootcamp">DevBootcamp.</a> Name inspired by <a href="http://www.youtube.com/watch?v=v5p46Ox4wBc" alt="SHORTY IS THE SHIT!!!!">this.</a>
-    </div>
-</div>
+            <% if current_user %>
+        <a href="/logout" class="user-link">Logout</a>
+      <% end %>
+      <span>| A Karst & KCHAMP Production. Made possible by <a href="http://devbootcamp.com" alt="Dev Bootcamp">DevBootcamp.</a> Name inspired by <a href="http://www.youtube.com/watch?v=v5p46Ox4wBc" alt="SHORTY IS THE SHIT!!!!">this.</a>
+    </div> <!-- Closes footer DIV -->
+</div><!-- Closes container DIV -->
 </body>
 </html>

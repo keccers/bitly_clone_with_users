@@ -1,28 +1,28 @@
 <h1>Hi, <%= @user.username %>!</h1>
 <h2>Email: <%= @user.email %></h2>
-
+<hr class="divider" />
 <h2>Create A New Super-Hot URL</h2>
 <form action="/user-urls" method="post">
   <%= erb :_create_url_form, layout: false %>
 </form>
-
+<hr class="divider" />
 <% if @links %>
-<h2>Your URLs</h2>
-<table>
+<h2>Your Perfect Tens:</h2>
+<table class="center">
     <tr>
-    <th>Pretty URL</th>
-    <th>Original URL</th>
-    <th>Click Count</th>
+    <th class="grid_4 alpha">Pretty URL</th>
+    <th class="grid_4">Original URL</th>
+    <th class="grid_4">Click Count</th>
   </tr>
 <% end %>
 
   <% @links.each do |link| %>
   <tr>
-    <td>
+    <td class="grid_4 alpha">
         <a href="http://<%= request.env['HTTP_HOST'] %>/<%= link.short %>" alt="<%= link.long %>">http://<%= request.env['HTTP_HOST'] %>/<%= link.short %></a>
     </td>
-    <td><%= link.long %></td>
-    <td><%= link.click_count %></td>
+    <td class="grid_4"><%= link.long %></td>
+    <td class="grid_4"><%= link.click_count %></td>
   </tr>
   <% end %>
 </table>

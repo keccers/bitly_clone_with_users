@@ -1,10 +1,10 @@
     <% if @fail %>
         <h3><%= @fail %></h3>
     <% end %>
-    <label for="username">Username:</label>
-    <input type="text" name="user[username]" id="username" placeholder="Your Username">
-    <label>Email Address:</label>
-    <input type="text" name="user[email]" id="email" placeholder="Email Address">
-    <label for="password">Password:</label>
-    <input type="password" name="user[password]" id="password" placeholder="Password">
-    <input type="submit" value="Submit">
+    <label class="grid_1 alpha" for="username">Username:</label>
+    <input class="grid_2" type="text" name="user[username]" id="username" placeholder="Your Username">
+    <label class="grid_1" for="email">Email:</label>
+    <input class="grid_3" type="text" name="user[email]" id="email" placeholder="Email Address">
+    <label class="grid_1" for="password">Password:</label>
+    <input class="grid_3" type="password" name="user[password]" id="password" placeholder="Password">
+    <input class="grid_1 omega submit" type="submit" value="Submit">
