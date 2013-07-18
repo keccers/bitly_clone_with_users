@@ -1,9 +1,99 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+/* Base */
+body {
+  background-color: #080B74;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  padding: 40px 0px;
 }
+
+a {
+  color: #303285;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #560EAD;
+  text-decoration: underline;
+}
+
+input {
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+  padding-right: 5px;
+}
+
 th {
   text-align: left;
 }
+
+#wrapper {
+  background-color: #fff;
+  border: 2px #7375D8 solid;
+  margin: auto;
+  padding: 30px;
+  width: 1000px;
+}
+
+
+/* Header */
+#header {
+  color: #080B74;
+  text-align: left;
+}
+
+#header h1{
+  font-family: 'KnewaveRegular', sans-serif;
+  font-size: 60px;
+  margin: 10px 0px 5px 0px;
+  text-transform: uppercase;
+}
+
+#header a:hover {
+  color: #080B74;
+  text-decoration: none
+}
+
+#header span {
+  font-size: 20px;
+  font-style: oblique;
+  margin: 10px 0px;
+}
+
+/* Content */
+#content {
+  padding: 10px 0px 20px 0px;
+}
+
+#content label {
+  float: left;
+  font-size: 18px;
+  font-weight: 600px;
+}
+
+#content input {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 200px;
+}
+
+#content form {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* Homepage */
+.call_to_action {
+  clear: both;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* Footer */
+#footer {
+  font-size: 14px;
+}
+

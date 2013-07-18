@@ -11,22 +11,33 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
+ 
+  <!--
+    Fonts
+  -->
+  <link rel="stylesheet" href="/css/webfonts.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600,800' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title>Dummy Users</title>
+  <title>SHORTY IS THE SHIT</title>
 </head>
 <body>
-  <div id="header">
-    <% if current_user %>
-      <a href="/logout">Logout</a>
-    <% end %>
-  </div>
-  <div id="content">
-    <%= yield %>
-  </div>
-  <div id="footer">
-  </div>
+ <div id="wrapper"> 
+    <div id="header">
+      <a href="/" alt="Shorty Is A Ten"><h1>Shorty Is A Ten!</h1></a>
+      <span>Make your links perfect tens. Short, readable URLs every time.</span>
+      <% if current_user %>
+        <a href="/logout">Logout</a>
+      <% end %>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <span>A Karst & KCHAMP Production. Made possible by <a href="http://devbootcamp.com" alt="Dev Bootcamp">DevBootcamp.</a> Name inspired by <a href="http://www.youtube.com/watch?v=v5p46Ox4wBc" alt="SHORTY IS THE SHIT!!!!">this.</a>
+    </div>
+</div>
 </body>
 </html>

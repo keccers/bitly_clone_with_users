@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'KnewaveRegular';
+    src: url('../webfonts/knewave-webfont.eot');
+    src: url('../webfonts/knewave-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/knewave-webfont.woff') format('woff'),
+         url('../webfonts/knewave-webfont.ttf') format('truetype'),
+         url('../webfonts/knewave-webfont.svg#KnewaveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

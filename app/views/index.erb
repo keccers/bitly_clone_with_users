@@ -1,4 +1,4 @@
-<div class="container">
+
 <% if @message %>
   <h2>Success! Shorty is a ten! Access her here: http://<%= request.env['HTTP_HOST'] %>/<%= @message %></h2>
 <% elsif @errors %>
@@ -10,5 +10,7 @@
 <form action="/urls" method="post">
   <%= erb :_create_url_form, layout: false %>
 </form>
-<h2>Want to keep track of your goregous links? <a href="/create_user" alt="Become a member!">Become a member</a> or <a href="/login" alt="Login to your account"> login to your account</a>.</h2>
+<div class="call_to_action">
+  <p>Want to keep track of your goregous links? <a href="/create_user" alt="Become a member!">Become a member</a> or <a href="/login" alt="Login to your account"> login to your account</a>.
+  </p>
 </div>
