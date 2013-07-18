@@ -2,7 +2,7 @@ get '/' do
   if current_user
     redirect to "/profile/#{current_user.id}"
   else
-    redirect '/login'
+    erb :index
   end
 end
 
@@ -33,7 +33,7 @@ post '/create_user' do
     session[:user_id] = @user.id
     redirect "/profile/#{@user.id}"
   else
-    @fail = "Try again, buddy."
+    @errors = @user.errors
     erb :create_user
   end
 end
@@ -41,6 +41,7 @@ end
 get '/profile/:user_id' do
   if User.find_by_id(params[:user_id]) == current_user
     @user = current_user
+    @links = Url.find_all_by_user_id(@user.id)
     erb :profile
   else 
     redirect '/lol_nope'
@@ -48,7 +49,8 @@ get '/profile/:user_id' do
 end
 
 get '/logout' do
-  redirect '/login'
+  session[:user_id] = nil
+  redirect '/'
 end
 
 get '/lol_nope' do

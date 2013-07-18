@@ -1,23 +1,14 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
-
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<% if @message %>
+  <h2>Success! Shorty is a ten! Access her here: http://<%= request.env['HTTP_HOST'] %>/<%= @message %></h2>
+<% elsif @errors %>
+  <% @errors.each do |key, value| %>
+    <h2><%= value %></h2>
+  <% end %>
+  <h2>Try again, buddy.</h2>
+<% end %>
+<form action="/urls" method="post">
+  <%= erb :_create_url_form, layout: false %>
+</form>
+<h2>Want to keep track of your goregous links? <a href="/create_user" alt="Become a member!">Become a member</a> or <a href="/login" alt="Login to your account"> login to your account</a>.</h2>
 </div>

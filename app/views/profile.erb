@@ -1,2 +1,28 @@
 <h1>Hi, <%= @user.username %>!</h1>
 <h2>Email: <%= @user.email %></h2>
+
+<h2>Create A New Super-Hot URL</h2>
+<form action="/user-urls" method="post">
+  <%= erb :_create_url_form, layout: false %>
+</form>
+
+<% if @links %>
+<h2>Your URLs</h2>
+<table>
+    <tr>
+    <th>Pretty URL</th>
+    <th>Original URL</th>
+    <th>Click Count</th>
+  </tr>
+<% end %>
+
+  <% @links.each do |link| %>
+  <tr>
+    <td>
+        <a href="http://<%= request.env['HTTP_HOST'] %>/<%= link.short %>" alt="<%= link.long %>">http://<%= request.env['HTTP_HOST'] %>/<%= link.short %></a>
+    </td>
+    <td><%= link.long %></td>
+    <td><%= link.click_count %></td>
+  </tr>
+  <% end %>
+</table>

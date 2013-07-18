@@ -1,3 +1,10 @@
+<% if @errors %>
+  <% @errors.each do |key, value| %>
+    <h2><%= value %></h2>
+  <% end %>
+  <h2>Try again, buddy.</h2>
+<% end %>
+
 <form action="/create_user" method='post'>
   <%= erb :_login_form, layout: false %>
 </form>
