@@ -1,0 +1,5 @@
+User.create(username: "jezebel", password:"jezebel", email:"heathen@feminist.com")
+User.create(username: "calvin", password:"hobbes", email:"calvin@hobbes.edu")
+User.create(username: "the_dream", password:"terius", email:"the_dream@richandfamous.info")
+User.create(username: "katy", password:"perry", email:"waking@vegas.museum")
+User.create(username: "channing_tatum", password:"muscles", email:"hotbody@sexymales.org")

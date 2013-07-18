@@ -1,0 +1,12 @@
+    <% if @fail %>
+        <h3><%= @fail %></h3>
+    <% end %>
+    <label for="username">Username:</label><br>
+    <input type="text" name="user[username]" id="username" placeholder="Your Username"><br>
+    <br>
+    <label>Email Address:</label><br>
+    <input type="text" name="user[email]" id="email" placeholder="Email Address"><br>
+    <br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="user[password]" id="password" placeholder="Your supersecret password"><br>
+    <input type="submit" value="Submit">
